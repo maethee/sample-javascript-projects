@@ -1,0 +1,364 @@
+/* Font Face */
+
+@import "varieables";
+@import "styles";
+@import "mixins/responsive";
+@import "utilities/general";
+@import "components/fonts";
+@import "components/form";
+@import "components/modal";
+@import "components/image";
+@import "components/slide";
+@import "grid/colums";
+@import "elements/menu";
+@import "elements/nav";
+@import "elements/tooltip";
+@import "elements/feeling";
+@import "elements/movie";
+@import "elements/review";
+@import "elements/drafts";
+@import "elements/media";
+@import "amp/media";
+
+@import "page/home";
+
+
+@font-face {
+    font-family: 'DBHelvethaica';
+    src: url('../../fonts/db_helvethaica_x_thin_v3.2-webfont.eot') format('embedded-opentype'),
+    url('../../fonts/db_helvethaica_x_thin_v3.2-webfont.woff') format('woff'), /* Super Modern Browsers */
+    url('../../fonts/db_helvethaica_x_thin_v3.2-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'DBHelvethaica';
+    src: url('../../fonts/db_helvethaica_x_li_v3.2-webfont.eot') format('embedded-opentype'),
+    url('../../fonts/db_helvethaica_x_li_v3.2-webfont.woff') format('woff'), /* Super Modern Browsers */
+    url('../../fonts/db_helvethaica_x_li_v3.2-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'DBHelvethaica';
+    src: url('../../fonts/db_helvethaica_x_med_v3.2-webfont.eot') format('embedded-opentype'),
+    url('../../fonts/db_helvethaica_x_med_v3.2-webfont.woff') format('woff'), /* Super Modern Browsers */
+    url('../../fonts/db_helvethaica_x_med_v3.2-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../../fonts/fontawesome-webfont.eot') format('embedded-opentype'),
+    url('../../fonts/fontawesome-webfont.woff') format('woff'), /* Super Modern Browsers */
+    url('../../fonts/fontawesome-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: 700;
+}
+html {
+    background-color: #141414 !important;
+}
+body#wrapper{
+    /*Reset Chrome css*/
+    text-decoration: none;
+    outline:none;
+    line-height: 1.6em;
+    /*background-color: #141414;*/
+    color: #e5e5e5;
+    font-family: 'DBHelvethaica',Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: 'DBHelvethaica',Helvetica,Arial,sans-serif;
+    //font-size: 40px;
+    font-weight: $headings-font-weight;
+    line-height: 1.9;
+    color: #ffffff;
+}
+h2 {
+    font-family: 'DBHelvethaica',Helvetica,Arial,sans-serif;
+    //font-size: 32px;
+    line-height: 1.8;
+    color: #ffffff;
+    font-weight: $headings-font-weight;
+}
+h3 {
+    font-family: 'DBHelvethaica',Helvetica,Arial,sans-serif;
+    //font-size: 26px;
+    line-height: 1.7;
+    color: #ffffff;
+    font-weight: $headings-font-weight;
+}
+h4{
+    font-family: 'DBHelvethaica',Helvetica,Arial,sans-serif;
+    //font-size: 20px;
+    color: #ffffff;
+    font-weight: $headings-font-weight;
+}
+h5{
+    //font-size: 14px;
+    font-weight: $headings-font-weight;
+    font-family: 'DBHelvethaica',Helvetica,Arial,sans-serif;
+}
+hr{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-top: 1px solid #404040;
+}
+header{
+    background-color: #000;
+    position: relative;
+    z-index: 10;
+}
+ul{
+    list-style: none;
+    margin: 0;
+}
+section{
+    padding-top: 0px;
+
+}
+#wrapper section.section.bg-dark{
+    background-color: #000;
+}
+section.bg-dark{
+    background-color: #000;
+}
+footer {
+    .nav-tsup{
+        padding: 2px 0;
+        div{
+            display: inline-block;
+        }
+    }
+    .footer {
+        padding: 10px 0 14px;
+        line-height: 3.3em;
+        background: black;
+        a{
+            color: $link-footer-color;
+            text-decoration: none;
+            border-bottom: 0;
+            &:hover{
+                color: $link-hover-color;
+            }
+        }
+
+    }
+    > .container{
+        padding: 20px;
+    }
+    .nav.navbar-left > li{
+        float: left;
+    }
+    .nav.navbar-right{
+        //padding-left: 14px;
+    }
+    .navbar-nav {
+        margin: 0 -9px;
+        margin-bottom: -8px;
+    }
+
+}
+
+.nopad{
+    padding: 0px
+}
+
+/** Navs Search **/
+.navbar-brand{
+    img{
+        max-height: 40px;
+    }
+}
+#search-box{
+
+    .form-group{
+        position: relative;
+    }
+    .fg-search{
+        position: relative;
+    }
+    .search-list{
+        position: absolute;
+        z-index: 1;
+    }
+    i.fa-search{
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        font-size: 15px;
+    }
+    .search-list{
+        a:hover, a:focus{
+            text-underline: none;
+        }
+        .media{
+            padding: 4px 4px 4px 4px;
+        }
+        padding: 0;
+    }
+    .card-content {
+        padding: 7px 14px;
+    }
+    a:hover{
+        color: #e5e5e5;
+    }
+    .search-list{
+        display: none;
+        position: absolute;
+        background: #000;
+        width: 300px;
+        max-height: 332px;
+        overflow: hidden;
+        overflow-y: auto;
+        border-radius: 3px;
+        strong{
+            color: #e5e5e5;
+        }
+        li:hover{
+            background: #2a2a2a;
+        }
+        .fa{
+            color: #d2b46b;
+        }
+    }
+    .not-found{
+        color: #7a7a7a;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+#searchhelp{
+    .form-group{
+        position: relative;
+    }
+    .fg-search{
+        position: relative;
+    }
+    i.fa-search{
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        font-size: 15px;
+    }
+}
+
+/** Language **/
+.nav-language{
+    a{
+        text-transform: capitalize;
+        i{
+            margin-left: 4px;
+        }
+    }
+}
+/** Fonts Awesome **/
+a.fa{
+    color: #fff;
+}
+.fa-angle-down-after:after {
+    content: "\f107";
+}
+
+/** Button **/
+.navbar{
+    .btn{
+        font-size: $font-size-base;
+    }
+}
+
+.button.is-loading:before{
+    -webkit-animation: fa-spin .5s infinite linear;
+    animation: fa-spin .5s infinite linear;
+    border: 2px solid #dbdbdb;
+    border-radius: 290486px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 16px;
+    position: relative;
+    width: 16px;
+    left: 50%;
+    margin-left: -8px;
+
+    position: absolute;
+    top: 50%;
+    position: absolute !important;
+}
+.btn.is-loading {
+    padding: 6px 56px;
+    text-indent: -2000px;
+    position: relative;
+    &:before {
+        -webkit-animation: fa-spin .5s infinite linear;
+        animation: fa-spin .5s infinite linear;
+        border: 2px solid #dbdbdb;
+        border-radius: 290486px;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        content: "";
+        display: block;
+        height: 16px;
+        position: relative;
+        width: 16px;
+        left: 50%;
+        margin-left: -16px;
+        margin-top: -8px;
+        position: absolute;
+        top: 50%;
+        position: absolute !important;
+    }
+}
+    .btn-mgl{
+        margin-left: $button-mgl;
+    }
+    /** Image **/
+    .is-32x32{
+        width: 32px;
+        height: 32px;
+    }
+    .is-48x48{
+        width: 48px;
+        height: 48px;
+    }
+    /**
+    .image img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }**/
+    .img-cc{
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        img{
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+    }
+
+    .user-img{
+        max-width: 40px;
+    }
+
+/** Page not found **/
+.page-not-found{
+    text-align: center;
+    font-size: 30px;
+    padding: 200px 100px;
+    i{
+        font-size: 40px;
+        margin-right: 12px;
+    }
+}
+
+.title-tranding{
+
+}
+.series-inline{
+    display: -webkit-box;
+    padding-top:20px;
+}
+
+@import "responsives/cuctom";
