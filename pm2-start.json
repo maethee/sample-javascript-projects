@@ -1,0 +1,7 @@
+[
+  {
+    "name"       : "Server",
+    "script"     : "./server.js",
+    "instances"  : "1"
+  }
+]

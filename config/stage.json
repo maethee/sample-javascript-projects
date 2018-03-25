@@ -9,8 +9,8 @@
     }
   },
   "mongodb":{
-    "url": "mongodb://xxx:27777/sample",
-    "name": "avengers",
+    "url": "mongodb://localhost:27017/sample",
+    "name": "sample",
     "options":{
       "db": {
         "native_parser": true
@@ -22,7 +22,7 @@
       "readPreference": "secondary",
       "authMechanism": "SCRAM-SHA-1",
       "auth": {
-        "authdb": "admin"
+        "authdb": "sample"
       },
       "mongos": true,
       "user": "sample",

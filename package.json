@@ -2,22 +2,38 @@
   "name": "sample-website-javascript",
   "version": "0.0.1",
   "main": "server.js",
+  "description": "nodejs, design patterns, es6, sample modules",
+  "license": "MIT",
+  "author": {
+    "name": "Maethee",
+    "email": "maethee.chakkuchantorn@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maethee/sample-javascript-projects"
+  },
   "scripts": {
+    "start": "export NODE_ENV=stage && pm2 start pm2-start.json",
     "test": "jasmine --no-color"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
     "config": "^1.30.0",
     "cookie-parser": "^1.4.3",
-    "custom-authentication": "file:modules/custom-authentication",
-    "custom-validation": "file:modules/custom-validation",
+    "cron": "^1.3.0",
+    "custom-authentication": "file:./modules/custom-authentication",
+    "custom-validation": "file:./modules/custom-validation",
+    "facebook-graph": "file:./modules/facebook-graph",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+    "firebase-admin": "^5.11.0",
     "i18n": "^0.8.3",
     "mongoose": "^5.0.9",
     "pug": "^2.0.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "jasmine": "^3.1.0"
   }
 }

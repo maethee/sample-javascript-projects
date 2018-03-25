@@ -1,0 +1,40 @@
+@import "varieables";
+@import "containers";
+@import "input";
+
+#root{
+  width: 100%;
+  height: 100%;
+
+  & >div{
+    width: 100%;
+    height: 100%;
+  }
+  .scene{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/**
+* Topics
+*/
+h1 ,h2 ,h3, h4, h5{
+  &.topic{
+    background: #F05F40;
+    padding: 8px 14px;
+    color: #fff;
+    width: 100%;
+  }
+}
+
+.tp-con{
+  border-right: 2px solid #F05F40;
+}
+
+
+
+.navbar{
+  box-shadow: 0 4px 2px -4px grey;
+}
