@@ -1,4 +1,6 @@
 
-let _getProducts = function () {
+
+
+export function getFeeds() {
     
 }

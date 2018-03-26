@@ -23,7 +23,7 @@ class FeedFactory extends CoreFactory{
      * @param {String} id unique
      * @return {Object} FeedModel Promise for the completion of the callback
      * */
-    getID() {
+    getID(id) {
         return new Promise((resolve, reject) =>{
             firebase.database().ref(this.getPath(id)).once('value').then(function(snapshot) {
                 resolve(new FeedModel(snapshot.val()));
@@ -106,10 +106,10 @@ class FeedFactory extends CoreFactory{
     updateList(values) {
 
         var _updates = [];
-        console.log('updateList',values);
-        // if(typeof values != 'object'){
-        //     reject(new Error('Value is not Array.'))
-        // }
+
+        if(typeof values != 'object'){
+            reject(new Error('Value is not Array.'))
+        }
 
         values.forEach(function (value) {
             if( value.id ){
@@ -117,7 +117,6 @@ class FeedFactory extends CoreFactory{
                 _updates[value.id] = _model.toObject();
             }
         });
-
 
         return firebase.database().ref(this.getPrefix()).set(_updates);
 

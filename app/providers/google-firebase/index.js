@@ -14,5 +14,6 @@ module.exports = function () {
         credential: admin.credential.cert(serviceAccount),
         databaseURL: config.firebase.url
     });
+    return admin;
 
 }
