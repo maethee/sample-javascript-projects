@@ -4,7 +4,13 @@
 
 Nodejs 8.*
 
+## Docker
 
+```
+ npm run docker:build
+ npm run docker:run  //port : 49161
+ 
+```
 ## REST API
 
 All of files I push in `/app` folder
@@ -30,6 +36,8 @@ All of files I push in `/app` folder
 ### routers
    Route is point the request to controller functions
    
+### crons
+  Crons folder is keep all background process.
    
 ## Modules
   Functions can reusable to other projects.
