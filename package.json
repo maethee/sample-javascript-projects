@@ -14,7 +14,9 @@
   },
   "scripts": {
     "start": "export NODE_ENV=stage && pm2 start pm2-start.json",
-    "test": "jasmine --no-color"
+    "test": "jasmine --no-color",
+    "docker:build": "docker build -t sample-javascript/nodejs .",
+    "docker:run": "docker run -p 49161:3000 -d sample-javascript/nodejs"
   },
   "dependencies": {
     "body-parser": "^1.18.2",

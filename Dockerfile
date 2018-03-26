@@ -8,6 +8,7 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package*.json ./
 
+RUN npm install pm2 -g
 RUN npm install
 # If you are building your code for production
 # RUN npm install --only=production
@@ -15,7 +16,7 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 8080
+EXPOSE 3000
 
 
-CMD [ "npm", "start" ]
+CMD ["pm2-runtime", "server.js"]
